@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylsheet" type="css" href="css/styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <!-- Proyecto de Techzone, Alba Miranda Carrasco -->
+    <title>TechZone Store project</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Fases Resueltas TechZone</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Información ampliada</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Enlace dropdown
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+              >
+                <li><a class="dropdown-item" href="#">Acción</a></li>
+                <li><a class="dropdown-item" href="#">Otra acción</a></li>
+                <li><a class="dropdown-item" href="#">Algo más aquí</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <h1 class="text-center mb-4 m-4">Planificación y Análisis de Requisitos</h1>
+    <table class="table table-striped mt-3 w-50 mx-auto">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Requisito</th>
+          <th scope="col">Plazo de entrega</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row row-light">1</th>
+          <td>Catálogo de productos</td>
+          <td>2 semanas</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Carrito de compras</td>
+          <td>1 semana</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Registro e inicio de sesión de usuarios</td>
+          <td>2 semanas</td>
+        </tr>
+        <tr>
+          <th scope="row">4</th>
+          <td>Historial de pedidos y gestión de cuentas</td>
+          <td>1 semana</td>
+        </tr>
+        <tr>
+          <th scope="row">5</th>
+          <td>Proceso de pago y opciones (Stripe y Coinbase)</td>
+          <td>2 semanas</td>
+        </tr>
+        <tr>
+          <th scope="row">6</th>
+          <td>Notificaciones por correo electrónico</td>
+          <td>1 semana</td>
+        </tr>
+        <tr>
+          <th scope="row">7</th>
+          <td>Seguimiento de pedidos en tiempo real</td>
+          <td>1 semana</td>
+        </tr>
+        <tr>
+          <th scope="row">8</th>
+          <td>Rendimiento y escalabilidad</td>
+          <td>En paralelo con la implementación</td>
+        </tr>
+        <tr>
+          <th scope="row">9</th>
+          <td>Seguridad (SSL, cifrado, protección XSS/CSRF)</td>
+          <td>En paralelo con la integración de pagos</td>
+        </tr>
+        <tr>
+          <th scope="row">10</th>
+          <td>Compatibilidad (diseño responsivo)</td>
+          <td>Durante todo el desarrollo</td>
+        </tr>
+        <tr>
+          <th scope="row">11</th>
+          <td>Mantenimiento (código limpio, plan de actualizaciones)</td>
+          <td>Al final del proyecto</td>
+        </tr>
+        <tr>
+          <th scope="row">12</th>
+          <td>Pruebas de rendimiento, seguridad y escalabilidad</td>
+          <td>2 semanas</td>
+        </tr>
+        <tr>
+          <th scope="row">13</th>
+          <td>Pruebas de compatibilidad</td>
+          <td>1 semana</td>
+        </tr>
+        <tr>
+          <th scope="row">14</th>
+          <td>Despliegue y puesta en producción</td>
+          <td>1 semana</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 class="text-center mb-4 m-4">Definición de Requisitos</h1>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card m-4" style="width: 40rem">
+          <div class="card-body">
+            <h3 class="card-title text-center">Requisitos funcionales</h3>
+            <p class="card-text">
+              Catálogo de productos: Los usuarios podrán ver todos los productos
+              organizados por categorías.
+            </p>
+            <p class="card-text">
+              Subfunción: Los usuarios pueden hacer clic en un producto para ver
+              detalles como la descripción, el precio y características
+              adicionales. Carrito de compras: Los usuarios podrán añadir
+              productos a un carrito de compras.
+            </p>
+            <p class="card-text">
+              Subfunción: El carrito debe poder actualizarse con cambios de
+              cantidad y eliminación de productos. Registro e inicio de sesión:
+              Los usuarios podrán registrarse con su correo electrónico y
+              gestionar su cuenta.
+            </p>
+            <p class="card-text">
+              Proceso de pago: Los usuarios podrán pagar usando varios métodos,
+              como tarjeta de crédito o PayPal.
+            </p>
+            <p class="card-text">
+              Subfunción: Verificar el costo del envío antes del pago y
+              confirmar el pedido.
+            </p>
+            <p class="card-text">
+              Notificaciones de pedidos: Los usuarios recibirán notificaciones
+              por correo electrónico sobre el estado de su pedido, como
+              confirmación de compra y envío.
+            </p>
+            <p class="card-text">
+              Seguimiento de pedidos: Los usuarios podrán seguir el estado de
+              sus pedidos en tiempo real una vez que hayan sido enviados.
+            </p>
+            <a href="#" class="card-link"
+              >Ampliar información de los requisitos funcionales</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card m-4" style="width: 40rem">
+          <div class="card-body">
+            <h3 class="card-title text-center">Requisitos No Funcionales</h3>
+            <p class="card-text">
+              Usabilidad: La interfaz debe ser fácil de usar e intuitiva, con
+              una navegación fluida entre las secciones del catálogo, carrito de
+              compras y gestión de cuentas.
+            </p>
+
+            <p class="card-text">
+              Rendimiento: La aplicación debe poder soportar múltiples usuarios
+              simultáneamente, manteniendo tiempos de respuesta rápidos,
+              especialmente durante el proceso de pago.
+            </p>
+
+            <p class="card-text">
+              Seguridad: El sistema debe manejar de manera segura los datos de
+              los usuarios y sus transacciones, asegurando la privacidad de la
+              información personal y los datos financieros.
+            </p>
+
+            <p class="card-text">
+              Disponibilidad: La plataforma debe estar disponible 24/7, con un
+              mínimo de tiempo de inactividad durante actualizaciones o
+              mantenimiento.
+            </p>
+
+            <p class="card-text">
+              Escalabilidad: El sistema debe ser capaz de manejar el crecimiento
+              en la cantidad de productos, usuarios y transacciones sin degradar
+              el rendimiento.
+            </p>
+
+            <p class="card-text">
+              Compatibilidad: La aplicación debe ser accesible en distintos
+              dispositivos (móviles, tablets, desktops) y navegadores modernos.
+            </p>
+
+            <p class="card-text">
+              Mantenibilidad: El código de la aplicación debe estar bien
+              documentado para facilitar futuras actualizaciones o correcciones.
+            </p>
+
+            <a href="#" class="card-link"
+              >Ampliar información de los requisitos NO funcionales</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <!-- Título -->
+      <h1 class="text-center mb-4">Diseño de la Arquitectura</h1>
+
+      <!-- Sección de arquitectura -->
+      <div class="row mb-4">
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">Frontend</div>
+            <div class="card-body">
+              <p>
+                Desarrollado en <strong>React</strong> para una interfaz ágil y
+                responsiva, adaptada a móviles y tablets.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">Backend</div>
+            <div class="card-body">
+              <p>
+                Usando <strong>Node.js</strong> con una API REST para manejar
+                operaciones de usuario, carrito y pagos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-header bg-success text-white">Base de Datos</div>
+            <div class="card-body">
+              <p>
+                <strong>MongoDB</strong> se usa para gestionar productos,
+                usuarios y pedidos, asegurando almacenamiento escalable y
+                eficiente.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-header bg-success text-white">
+              Pasarelas de Pago
+            </div>
+            <div class="card-body">
+              <p>
+                Integración de <strong>Stripe</strong> para pagos con tarjeta y
+                <strong>Coinbase Commerce</strong> para criptomonedas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Backend, Usuario y Pagos -->
+      <div class="row mb-4">
+        <div class="col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">Backend</div>
+            <div class="card-body">
+              <ul>
+                <li>Usa interfaz</li>
+                <li>Solicita datos</li>
+                <li>Consulta/Modifica datos</li>
+                <li>Pagos y criptomonedas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">Usuario</div>
+            <div class="card-body">
+              <p>
+                El frontend está desarrollado en <strong>React</strong>,
+                mientras que el backend usa <strong>Node.js</strong> con una API
+                REST, una base de datos <strong>MongoDB</strong>, e integración
+                de pagos con <strong>Stripe</strong> y
+                <strong>Coinbase Commerce</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card shadow-sm">
+            <div class="card-header bg-dark text-white">Pagos</div>
+            <div class="card-body">
+              <ul>
+                <li>Pagos con tarjeta vía Stripe</li>
+                <li>Pagos con criptomonedas vía Coinbase Commerce</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Implementación -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-header bg-info text-white">Implementación</div>
+            <div class="card-body">
+              <ul>
+                <li>
+                  Configurar API REST para gestionar productos, carrito y pagos.
+                </li>
+                <li>
+                  Crear interfaces con React, incluyendo recomendación de
+                  productos.
+                </li>
+                <li>
+                  Integrar pagos y configurar cupones de descuento en tiempo
+                  real.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Pruebas -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-header bg-warning text-dark">Pruebas</div>
+            <div class="card-body">
+              <ul>
+                <li>
+                  Pruebas de carga con <strong>JMeter</strong> para verificar el
+                  rendimiento bajo múltiples usuarios.
+                </li>
+                <li>
+                  Testear los flujos de compra y la funcionalidad del carrito en
+                  varios dispositivos y navegadores.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Despliegue y Mantenimiento -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card shadow-sm">
+            <div class="card-header bg-secondary text-white">
+              Despliegue y Mantenimiento
+            </div>
+            <div class="card-body">
+              <ul>
+                <li>
+                  Desplegar en <strong>AWS</strong> para asegurar escalabilidad.
+                </li>
+                <li>Usar balanceadores de carga y respaldo automatizado.</li>
+                <li>
+                  Monitorear con <strong>CloudWatch</strong> y establecer ciclos
+                  de actualización.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white pt-3">
+      <div class="container">
+        <div class="row">
+          <!-- Sección de contacto -->
+          <div class="col-md-4">
+            <h5>Contacto</h5>
+            <p><i class="bi bi-telephone"></i> Teléfono: +123 456 789</p>
+            <p><i class="bi bi-envelope"></i> Email: iesagora@ejemplo.com</p>
+            <p>
+              <i class="bi bi-geo-alt"></i> Dirección: Calle Falsa 123, Cáceres
+            </p>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row mt-4">
+          <div class="col text-center">
+            <p class="mt-4">
+              © 2024 Alba Miranda Carrasco. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts para ejecución de bootstrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
